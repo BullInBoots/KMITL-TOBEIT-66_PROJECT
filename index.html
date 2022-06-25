@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longdo_API_test</title>
+
+    <!--Styling with CSS-->
+    <style type="text/css">
+        html {
+            height: 100%;
+        }
+        body {
+            margin: 0px;
+            height: 100%;
+        }
+        #map {
+            height: 75%;
+        }
+    </style>
+
+    <!--Load API into website-->
+    <script src="https://api.longdo.com/map/?key=e2e60601020a8542e3bd6dd5d25ae82b"></script>
+    <script src="index.js"></script>
+
+</head>
+<body onload="init();">
+    <div id="map"></div>
+    <div class="container">
+        <div class="box">            
+            <button type="button" onclick="clearall()" id="btn">return</button>
+            <button type="button" onclick="toInfoTech()" id="btn">ป้ายรถเมล์ ฝั่งคณะเทคโนโลยีสารสนเทศ</button>
+            <button type="button" onclick="markerOnCrosshair()" id="btn">Mark</button>
+        </div>
+        <button type="button" onclick="toAgriTech()" id="btn">ป้ายรถเมล์ ฝั่งตรงข้ามคณะเทคโนโลยีการเกษตร</button>
+        <button type="button" onclick="toEngineer()" id="btn">ป้ายรถเมล์ ฝั่งคณะวิศวกรรมศาสตร์</button>
+        <button type="button" onclick="toFoodIndus()" id="btn">ป้ายรถเมล์ ฝั่งคณะอุตสาหกรรมอาหาร</button>
+        <button type="button" onclick="toOffPres()" id="btn">ป้ายรถเมล์ ฝั่งสำนักงานอธิการบดี</button>
+        <button type="button" onclick="toLitArts()" id="btn">ป้ายรถเมล์ ฝั่งคณะศิลปศาสตร์</button>
+    </div>
+</body>
+</html>
